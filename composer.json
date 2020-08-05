@@ -1,6 +1,6 @@
 {
-  "name": "onesite/bigquery",
-  "description": "BigQuery",
+  "name": "onesite/ai-fpt",
+  "description": "AI FPT Service",
   "license": "MIT",
   "authors": [
     {
@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "OneSite\\BigQuery\\": "src"
+      "OneSite\\AI\\FPT\\": "src"
     }
   },
   "autoload-dev": {
@@ -27,7 +27,7 @@
       "helpers.php"
     ],
     "psr-4": {
-      "OneSite\\BigQuery\\Tests\\": "tests"
+      "OneSite\\AI\\FPT\\Tests\\": "tests"
     }
   },
   "extra": {
