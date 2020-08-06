@@ -7,8 +7,7 @@
     </testsuites>
     <php>
         <includePath>.</includePath>
-        <env name="AI_FPT_API_URL" value="https://api.fpt.ai"/>
-        <env name="AI_FPT_API_KEY" value="DDae51js3WYFJMGjGiUswHRFYLjllTVi"/>
-        <!--<env name="AI_FPT_API_KEY" value="ZcbQ0UMxohstTWVah9r3Jx2GaSq6VEbB"/>-->
+        <env name="AI_FPT_API_URL" value=""/>
+        <env name="AI_FPT_API_KEY" value=""/>
     </php>
 </phpunit>

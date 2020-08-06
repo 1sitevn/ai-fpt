@@ -36,7 +36,7 @@ if (!function_exists('storage_path')) {
      */
     function storage_path($path = "")
     {
-        return realpath("storage/" . $path);
+        return __DIR__ . "/storage/" . $path;
     }
 }
 
@@ -47,6 +47,6 @@ if (!function_exists('base_path')) {
      */
     function base_path($path = "")
     {
-        return realpath($path);
+        return __DIR__ . "/" . $path;
     }
 }
