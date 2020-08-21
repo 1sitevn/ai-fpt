@@ -54,6 +54,19 @@ class AIFPTServiceTest extends TestCase
     }
 
     /**
+     * PHPUnit test: vendor/bin/phpunit --filter=testPPRecognition tests/AIFPTServiceTest.php
+     */
+    public function testPPRecognition()
+    {
+        $data = $this->service->getPassportRecognitionInfo(storage_path('data/pp-1.jpg'));
+        //$data = $this->service->getIDRecognitionInfo(storage_path('data/image-fail.jpg'));
+
+        print_r($data);
+
+        $this->assertTrue(true);
+    }
+
+    /**
      * PHPUnit test: vendor/bin/phpunit --filter=testGetFaceMatchImageInfo tests/AIFPTServiceTest.php
      */
     public function testGetFaceMatchImageInfo()

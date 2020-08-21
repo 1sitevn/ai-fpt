@@ -73,6 +73,41 @@ class AIFPTService
     }
 
     /**
+     * @param $filePath
+     * @return array
+     */
+    public function getPassportRecognitionInfo($filePath)
+    {
+        $response = $this->client->request('POST', $this->getApiUrl() . "/vision/passport/vnm", [
+            'http_errors' => false,
+            'verify' => false,
+            'headers' => [
+                "api-key" => $this->getApiKey()
+            ],
+            'multipart' => [
+                [
+                    'name' => 'image',
+                    'contents' => fopen($filePath, 'rb')
+                ]
+            ]
+        ]);
+
+        $data = json_decode($response->getBody());
+
+        if ($data->errorCode != 0) {
+            return [
+                'error' => [
+                    'message' => $data->errorMessage
+                ]
+            ];
+        }
+
+        return [
+            'data' => $data->data
+        ];
+    }
+
+    /**
      * @param $cardFilePath
      * @param $imageFilePath
      * @return array
