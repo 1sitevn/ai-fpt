@@ -43,7 +43,7 @@ class AIFPTService
      */
     public function getIDRecognitionInfo($filePath)
     {
-        $response = $this->client->request('POST', $this->getApiUrl() . "/vision/idr/vnm", [
+        $response = $this->client->request('POST', $this->getApiUrl() . "/vision/idr/vnm?check=1&postcheck=1", [
             'http_errors' => false,
             'verify' => false,
             'headers' => [
